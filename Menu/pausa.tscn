@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://blr83q6r37mk5"]
+
+[ext_resource type="Script" path="res://pausa.gd" id="1_2ah6s"]
+[ext_resource type="AudioStream" uid="uid://0nqkf4c54ymg" path="res://Efectos/toggle_002.ogg" id="2_kj66l"]
+
+[node name="Pausa" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_2ah6s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.160784, 0.00784314, 0.211765, 0.894118)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pausa"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kj66l")
